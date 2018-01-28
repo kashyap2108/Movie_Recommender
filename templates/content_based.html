@@ -1,0 +1,29 @@
+{% extends 'home.html' %}
+
+
+
+
+{% block center %}
+
+
+  		<h2>Movies List</h2>
+
+      <table class="table table-hover table-bordered">
+      <thead>
+          <tr>
+            <th>Title</th>
+            <th>Year of Release</th>
+            <th>Avg. Rating</th>
+          </tr>
+      </thead>
+      {% for movie in movies_list %}
+        <tr>
+        <th>{{ movie.0 }}</th> 
+        <th>{{ movie.1 }}</th> 
+        <th>{{ movie.2  }}</th>
+        </tr>
+      {% endfor %}  
+    </table>
+
+
+{% endblock %}

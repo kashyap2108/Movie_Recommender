@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block center %}
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="sumbit" class="btn btn-info">Login</button>
+	<a href="{% url  'accounts:password_reset'  %}" class="btn btn-info" role="button">Forgot Password</a>
+</form>
+
+{% endblock %}
+
+
+{% block right %}
+	
+{% endblock %}

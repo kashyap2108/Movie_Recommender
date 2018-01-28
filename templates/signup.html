@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+
+{% block center %}
+       
+  <h3 class="card-title">Sign up</h3>
+
+		<form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="sumbit" class="btn btn-primary">Signup</button>
+		</form>
+		<div class="card-footer text-muted text-center">
+  Already have an account? <a href="{% url 'accounts:login' %}">Log in</a>				
+
+{% endblock %}
+
+{% block right %}
+
+{% endblock %}

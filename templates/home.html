@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block center %}
+
+<h2>Top Rated Movies List</h2>
+
+      <table class="table table-hover table-bordered">
+      <thead>
+          <tr>
+            <th>Title</th>
+            <th>Year of Release</th>
+            <th>Avg. Rating</th>
+          </tr>
+      </thead>
+      {% for movie in movies_list %}
+        <tr>
+        <th>{{ movie.title }}</th> 
+        <th>{{ movie.release_year }}</th> 
+        <th>{{ movie.avg_rating  }}</th>
+        </tr>
+      {% endfor %}  
+  </table>
+
+{% endblock %}
